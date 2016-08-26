@@ -1,0 +1,39 @@
+public class Box {
+
+	public void show(){System.out.println("Shows from box");}
+}
+
+class A extends Box{
+	
+	public void show()
+	{
+		System.out.println("Shows from A");
+	}
+}
+
+class  B extends A{
+	public void show(){System.out.println("Shows from B");}
+}
+class  C extends B{
+	public void show(){System.out.println("Shows from C");}
+}
+
+class demo{
+	
+	public static void main(String args[])
+	{
+		A a= new A();
+		B b= new B();
+		C c= new C();
+		
+		A r;
+		r=a;
+		r.show();
+		
+		r=c;
+		r.show();
+				
+				
+	}
+}
+

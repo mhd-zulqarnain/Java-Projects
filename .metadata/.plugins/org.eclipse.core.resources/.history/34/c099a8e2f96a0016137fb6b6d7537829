@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+
+public class EnemyShip {
+
+	private double speed;
+	private String name;
+	
+	public String getName(){
+		return name;
+	}
+	public void setName(String newName)
+	{
+		name=newName;
+	}
+
+	public double getSpeed(){
+		return speed;
+	}
+	public void setSpeed(double newSpeed)
+	{
+		speed=newSpeed;
+	}
+	
+	public void followHeroShip(){
+			System.out.println(getName()+"is the following hero");
+		}
+	public void DisplayEnemyShip(){
+		System.out.println(getName()+"is on the screen");
+	}
+	public void enemyShipShoots()
+	{
+		System.out.println(getName()+"Did damage of "+getSpeed());
+	}
+	
+}
+
+class UFOEnemyShip extends EnemyShip{
+	
+	public UFOEnemyShip() {
+	setName("UFO enemy Ship");
+	setSpeed(21.2);
+	}
+	
+}
+class RocketEnemyShip extends EnemyShip{
+	
+	public RocketEnemyShip() {
+	setName("Rocket enemy Ship");
+	setSpeed(12.2);
+	}
+	
+}
+
+
+class Demo{
+	
+	public static void main (String args[])
+	{
+	EnemyFactory ships= new EnemyFactory();
+	Scanner input = new Scanner()
+	}
+}
+
+class EnemyFactory{
+	
+	
+}

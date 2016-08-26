@@ -1,0 +1,21 @@
+
+public interface flyBehavior {
+
+	public void fly();
+	
+}
+
+ class canfly implements flyBehavior{
+	  
+	 public void fly()
+	 {
+		 System.out.println("can fly");
+	 }
+}
+ class cantFly implements flyBehavior{
+	 
+	 public void fly()
+	 {
+		 System.out.println("can't fly");
+	 }
+ }

@@ -1,0 +1,27 @@
+
+
+public class User implements Observer{
+
+	private boolean inStock;
+	private static int OBSid=0;
+	private int  ObserverID;
+	
+	private Observable Observe;
+	
+	public User(Observable Observable)
+	{
+		this.Observe=Observable;
+		
+		Observable.addObserver(this);
+		
+			
+	}
+	public void update(boolean inStock) {
+		if(inStock==true)
+		System.out.println("Dress is in stock");
+		else
+		System.out.println("Not now Comming soon");
+				
+	}
+
+}
