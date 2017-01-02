@@ -1,0 +1,25 @@
+package VU;
+import javax.swing.*;
+public class PersonInfo {
+
+	String name;
+	String address;
+	String number;
+	
+	public PersonInfo(String name,String address,String number) {
+		this.name=name;
+		this.address=address;
+		this.number=number;
+	}
+	public void showInfo(){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("Enter an integer");
+		   
+
+	}
+
+}

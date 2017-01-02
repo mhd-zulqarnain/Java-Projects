@@ -1,0 +1,43 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class DemoME implements MouseMotionListener{
+
+	/**
+	 * @mouse event handling 
+	 *can handle only thoes component that implement container
+	 */
+	JFrame fr;
+	JLabel cordinates;
+	public DemoME(){
+		init();
+		
+	}
+	
+	public void init(){
+	fr= new JFrame();	
+	cordinates= new JLabel();
+	
+	Container c=fr.getContentPane();
+	c.setLayout(new FlowLayout());
+	fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	fr.add(cordinates);
+	fr.setSize(200,200);
+	fr.setVisible(true);
+	}
+	
+	public void mouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void main(String args[]){
+		DemoME fr= new DemoME();
+	}
+
+}

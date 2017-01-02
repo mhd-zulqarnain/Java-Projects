@@ -1,0 +1,30 @@
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+
+import javax.swing.event.*;
+
+public class Demo1 {
+	JFrame jr;
+	JButton btn;
+	
+	public Demo1(){
+		init();
+	}
+	public void init (){
+		
+		jr = new JFrame();
+		btn= new JButton("Hello");
+		Container c= jr.getContentPane();
+		
+		c.setLayout(new BorderLayout());
+		jr.add(btn);
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo1 d1= new Demo1();
+	}
+
+}

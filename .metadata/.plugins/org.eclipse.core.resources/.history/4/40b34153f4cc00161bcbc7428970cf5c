@@ -1,0 +1,39 @@
+package VU;
+
+import java.util.*;
+import javax.swing.*;
+public class menu {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		AddressBook ad= new AddressBook();
+		
+		while(true){
+			String input = JOptionPane.showInputDialog("Enter your choice");
+			char in=input.charAt(0);
+			switch(in){
+			case 1:
+				ad.addPerson();
+				break;
+			case 2:
+				String n= JOptionPane.showInputDialog("Enter to search");
+				ad.searchPerson(n);
+				break;
+			case 3:
+				String n1= JOptionPane.showInputDialog("Enter to search");
+				ad.DelPerson(n1);
+				break;
+			case 4:
+				System.out.println(	);
+				break;
+			default:
+				System.out.println("Invalid option");
+			}
+		}
+
+	}
+
+}

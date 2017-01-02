@@ -1,0 +1,30 @@
+
+public class NTest implements B{
+
+	
+	
+	
+	public static void main(String[] args) {
+		A test=new NTest();
+		test.show();
+		 
+	}
+
+	public void show() {
+		System.out.println("Function state");
+		
+	}
+
+	public void insert(int a) {
+		System.out.println("The value is "+a);
+	}
+
+}
+
+
+interface A{
+	void show();
+}
+interface B extends A{
+	void insert(int a);
+}
