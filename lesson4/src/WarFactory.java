@@ -12,7 +12,6 @@ public class WarFactory {
 	
 	public static void dostuff( orderArms n1)
 	{
-		
 		n1.armsStatus();
 	}
 }

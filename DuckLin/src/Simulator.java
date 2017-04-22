@@ -5,8 +5,6 @@ public class Simulator {
 	{
 		duck mallard= new mallardDuck();
 		mallard.performQuack();
-		mallard.changeQuack(new Squack());
-		mallard.performQuack();
 		mallard.performfly();
 		mallard.changFlyAbility(new flyRocketPowered());
 		mallard.performfly();

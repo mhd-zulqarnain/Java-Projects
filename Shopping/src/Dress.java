@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Dress implements observable{
 	
-	ArrayList<Oberver > obs;
+	ArrayList<Oberver> obs;
 	
 	public Dress(){
 		obs= new ArrayList<Oberver>();
