@@ -1,0 +1,66 @@
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+public class sideBar4{
+
+	JFrame fr;
+	test P;
+	int x=3;
+	int y=5;
+	public sideBar4(){
+		init();
+	}
+	void init(){
+		fr=new JFrame();
+		P= new test();
+		
+		Container c= fr.getContentPane();
+		c.setLayout(new BorderLayout());
+		fr.add(P);
+		fr.setSize(400,400);
+		fr.setVisible(true);
+		fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		keyHandler h= new keyHandler();
+		fr.addKeyListener(h);
+	}
+	
+	
+
+
+	class keyHandler extends KeyAdapter{
+		int x=5;
+		public void keyPressed(KeyEvent e){
+			
+			if(e.getKeyCode()==KeyEvent.VK_UP){
+				x=-5;
+			}
+			if(e.getKeyCode()==KeyEvent.VK_DOWN){
+				x=+5;
+			}
+			if(fr.getHeight()-40==P.mY){
+				x=fr.getHeight();
+			}
+			P.mY+=x;
+			P.repaint();
+		}
+	}
+	class test extends JPanel {
+		int mY=10;
+		public void paintComponent(Graphics g){
+			super.paintComponent(g);
+			Graphics2D g2= (Graphics2D)g;
+			
+			g2.setColor(Color.BLUE);
+			g2.fillRect(5,mY, 10, 40);
+		}
+	}
+	
+	public static void main(String args[]){
+		sideBar4 n= new sideBar4();
+	}
+	
+
+
+
+}

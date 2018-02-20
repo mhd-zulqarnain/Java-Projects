@@ -1,0 +1,35 @@
+import java.sql.*;
+
+public class JdbcDemo1 {
+
+	/**
+	 * @JDBC demo
+	 */
+	
+	
+	public static void main(String[] args) {
+	try{
+//		Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+		Conect con=null;
+		con=DriverManager.getConnection("jdbc:ucanaccess://E:/Work/java/Revise/PersonInfo.accdb;memory=false");
+		Statement st=con.createStatement();
+		ResultSet rs=st.executeQuery("Select * from person");
+		while(rs.next()){
+			String name,ad,ph;
+			name=rs.getString(2);
+			ad=rs.getString(3);
+			ph=rs.getString(4);
+			
+			System.out.println("Name: "+name+" address: "+ad+" Phone: "+ph);
+			
+		}
+		con.close();
+	}catch(Exception e){
+		System.out.println("Error "+e);
+	}
+	finally{
+		
+	}
+	}
+
+}

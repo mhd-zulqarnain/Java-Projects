@@ -1,0 +1,40 @@
+package Core;
+
+public class Game implements Runnable {
+
+	// Game stuff
+	Thread thread = new Thread();
+
+	public void run() {
+		try {
+			render();
+			update();
+			thread.sleep(1000 / 40);
+		} catch (Exception e) {
+			System.out.println("Error " + e);
+		}
+	}
+
+	public synchronized void start() {
+		thread.start();
+	}
+
+	public synchronized void stop() {
+
+		try {
+			thread.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private void render() {
+		System.out.println("Rendering:");
+	}
+
+	private void update() {
+		System.out.println("Updating");
+	}
+
+}

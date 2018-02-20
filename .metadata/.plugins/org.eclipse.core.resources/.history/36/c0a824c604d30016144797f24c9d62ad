@@ -1,0 +1,17 @@
+import java.sql.*;
+
+public class Conect {
+
+	/**
+	 * @param args
+	 */
+
+	public Connection con(){
+		Connection con=null;
+		try{
+			con=DriverManager.getConnection("jdbc:ucanaccess://E:/Work/java/Revise/PersonInfo.accdb;memory=false");
+	
+		}catch(Exception e){}
+		return con;
+	}
+}

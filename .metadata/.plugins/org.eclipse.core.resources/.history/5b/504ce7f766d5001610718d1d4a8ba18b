@@ -1,0 +1,62 @@
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+public class sideBar4 implements ActionListener{
+
+	JFrame fr;
+	test P;
+	int x=3;
+	int y=5;
+	public sideBar4(){
+		init();
+	}
+	void init(){
+		fr=new JFrame();
+		P= new test();
+		
+		Container c= fr.getContentPane();
+		c.setLayout(new BorderLayout());
+		fr.add(P);
+		fr.setSize(400,400);
+		fr.setVisible(true);
+		fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		Timer t= new Timer(5, this);
+		t.start();
+		
+	}
+	public void actionPerformed(ActionEvent e) {
+		if(fr.getWidth()-40==P.mX)
+			x=-5;
+		if(fr.getWidth()-40==P.mY)
+			y=-3;
+		if(P.mX==0)
+			x=5;
+		if(P.mY==0)
+			y=3;
+		P.mX+=x;
+		P.mY+=y;
+		
+		P.repaint();
+	}
+
+	public static void main(String args[]){
+		sideBar4 f= new sideBar4();
+	}
+	class test extends JPanel {
+		int mX,mY;
+		public void paintComponent(Graphics g){
+			super.paintComponent(g);
+			Graphics2D g2= (Graphics2D)g;
+			
+			g2.setColor(Color.BLUE);
+			g2.fillRect(mY,mX, 10, 40);
+		}
+	}
+	
+
+
+
+}

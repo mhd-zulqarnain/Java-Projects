@@ -1,0 +1,30 @@
+package Serilization;
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+
+public class SerliaNetwClint {
+
+	ArrayList<PersonDemo> arr=new ArrayList();
+	
+	public static void main(String args[]){
+		try {
+			//File reading stuff
+			FileInputStream ins= new FileInputStream("file.dat");
+			ObjectInputStream obs=new ObjectInputStream(ins);
+			
+			//File sending stuff to network
+			Socket s= new Socket("localhost",2222);
+			OutputStream in=s.getOutputStream();
+			ObjectOutputStream os=new ObjectOutputStream(in);
+			os.writeObject(obs.readObject());
+			
+			//Response from server
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

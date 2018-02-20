@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Sat Feb 04 11:42:10 PKT 2017
+org.eclipse.jst.jee.server\:webD01=C\:\\Program Files\\Tomcat 8.5\\wtpwebapps\\webD01
+org.eclipse.jst.jee.server\:Web01=C\:\\Program Files\\Tomcat 8.5\\wtpwebapps\\Web01
+org.eclipse.jst.jee.server\:test1=C\:\\Program Files\\Tomcat 8.5\\wtpwebapps\\test1
+org.eclipse.jst.jee.server\:CookieDemo=C\:\\Program Files\\Tomcat 8.5\\wtpwebapps\\CookieDemo

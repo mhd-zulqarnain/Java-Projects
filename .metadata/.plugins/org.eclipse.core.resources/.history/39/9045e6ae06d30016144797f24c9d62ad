@@ -1,0 +1,24 @@
+import java.sql.*;
+import java.util.Scanner;
+public class JDBCperp2 {
+
+	/**
+	 * @Prepare statement demo
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner("System.in");
+		String name=sc.nextLine();
+		
+		Conect c= new Conect();
+		try{
+			Connection con= c.getCon();
+			Statement st= con.createStatement();
+			
+		}catch(Exception e){
+			System.out.println("Error: "+e);
+		}
+		
+	}
+
+}

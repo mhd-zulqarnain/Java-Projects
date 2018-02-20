@@ -1,0 +1,7 @@
+void main(){
+int a, b, c;
+c = a + b;
+while ( c = "1" ){
+c++ ;
+}
+}

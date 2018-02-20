@@ -1,0 +1,63 @@
+package Core;
+
+import javax.swing.*;
+
+public class Game implements Runnable {
+
+	// Game stuff
+	Thread thread = new Thread();
+	boolean running;
+	
+	//Window stuff
+	JFrame fr;
+	private static int width=1000;
+	private static int height=width/16*9;
+	
+	public void run() {
+		try {
+			while(running){
+			render();
+			update();
+			thread.sleep(1000 / 40);
+			}
+		} catch (Exception e) {
+			System.out.println("Error " + e);
+		}
+	}
+	
+	public synchronized void start() {
+		thread.start();
+		running=true;
+	}
+
+	public synchronized void stop() {
+
+		try {
+			running=false;
+			thread.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public Game(){
+		init();
+	}
+
+	private void init(){
+		fr= new JFrame();
+		fr.setVisible(true);
+		fr.setSize(width,height);
+		fr.setResizable(false);
+		fr.setLocationRelativeTo(null);
+	}
+	private void render() {
+		System.out.println("Rendering:");
+	}
+
+	private void update() {
+		System.out.println("Updating");
+	}
+
+}

@@ -1,0 +1,35 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Ball extends JPanel {
+	int bX = 3, bY = 5;
+	sideBar4 Sr=new sideBar4();
+	public void paintComponent(Graphics g) {
+
+		super.paintComponent(g);
+		Graphics2D g2 = (Graphics2D) g;
+		g2.fillOval(bX, bY, 20,20);
+	}
+}
+
+class BallHandler implements ActionListener {
+	int x=0,y=5;
+	sideBar4 Sr=new sideBar4();
+	Ball P=new Ball();
+	
+	public void actionPerformed(ActionEvent e) {
+		if(Sr.fr.getWidth()-40==P.bX)
+			x=-5;
+		if(Sr.fr.getWidth()-40==P.bY)
+			y=-3;
+		if(P.bX==0)
+			x=5;
+		if(P.bY==0)
+			y=3;
+		P.bX+=x;
+		P.bY+=y;
+		
+		P.repaint();
+	}
+}
