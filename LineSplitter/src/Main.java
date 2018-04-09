@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        String input = "Hello World! new line.";
+        String input = "I am sam.Same I am.My name is.";
         SpaceInseter mSi = new SpaceInseter();
         String formatted = "";
         String[] words = input.split(" ");
